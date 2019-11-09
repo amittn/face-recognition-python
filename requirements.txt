@@ -1,0 +1,3 @@
+imutils
+dlib # or compile it form source
+face_recognition
