@@ -7,11 +7,8 @@ from PIL import Image
 group1_images = os.listdir('group1')
 group2_images = os.listdir('group2')
 
-print(len(group1_images))
-print(len(group2_images))
 
-
-def do_stuff():
+def main():
     print(len(group1_images))
     print(len(group2_images))
 
@@ -34,7 +31,6 @@ def do_stuff():
                 print("Matched: " + group1_image + "with " + group2_image)
             else:
                 print("Not matched: ")
-
 
 
 def pull_faces(folder, group_image):
@@ -67,4 +63,4 @@ if __name__ == "__main__":
     image2 = face_recognition.load_image_file(args['image_2'])
     pull_faces("group2/", image2)
 
-    do_stuff()
+    main()
