@@ -3,6 +3,7 @@
 # run identify_face.py 
 `python identify_face.py`
 
+
 # run fr.py
 `python fr.py --image_1 blg1.jpg --image_2 blg2.jpg`
 
