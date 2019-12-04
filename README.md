@@ -1,7 +1,7 @@
 # face-recognition-python
 
 # run identify_face.py 
-`python identify_face.py`
+`python identify_face.py -i test.jpg -t 0.6`
 
 
 # run fr.py

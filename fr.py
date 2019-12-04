@@ -4,11 +4,11 @@ import os
 from PIL import Image
 
 
-group1_images = os.listdir('group1')
-group2_images = os.listdir('group2')
-
 
 def main():
+    group1_images = os.listdir('group1')
+    group2_images = os.listdir('group2')
+
     print(len(group1_images))
     print(len(group2_images))
 
@@ -28,7 +28,7 @@ def main():
 
             # check if it was a match
             if result[0] == True:
-                print("Matched: " + group1_image + "with " + group2_image)
+                print("Matched: " + group1_image + " with " + group2_image)
             else:
                 print("Not matched: ")
 
@@ -41,10 +41,11 @@ def pull_faces(folder, group_image):
 
         face_image = group_image[top:bottom, left:right]
         pil_image = Image.fromarray(face_image)
-        #pil_image.show(pil_image)
+        #print(top)
+        pil_image.show(pil_image, top)
         pil_image.save(f'{folder}{top}.jpg')
 
-    return face_locations
+    #return face_locations
 
 
 def parse_arguments():
